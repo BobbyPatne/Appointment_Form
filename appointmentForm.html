@@ -1,0 +1,34 @@
+<template>
+<lightning-card title="Appointment Form" class="slds-var-p-around_small">
+    
+        <!-- <lightning-record-picker label="Contact Name" placeholder="Search contact Name..." object-api-name="Contact" value={selectedContact} onchange={handleContact} class="contactclass" field-level-help ="After Selecting Contact ,click  x sign"></lightning-record-picker> -->
+        
+
+    
+        
+            <lightning-combobox
+                    required
+                    label="Select Contact"
+                    value={selectedContact}
+                    placeholder="Select Contact"
+                    options={contactsOptions}
+                    onchange={handleContact} ></lightning-combobox>
+        
+        <!-- <lightning-input type="text" label="Name" placeholder="Enter Appointment Record Name" onchange={handleName} required value={selectedName}></lightning-input> -->
+        <lightning-input type="text" label="Subject" onchange={handleSubject} required value={selectedSubject} ></lightning-input>
+        <lightning-input type="text" label="Description" onchange={handleDescription} required value={selectedDescription}></lightning-input>
+
+     
+    <lightning-input type="date" name="input1" label="Enter a date" onchange={handleDate} required value={selectedDate}></lightning-input>
+    <lightning-input type="time" name="input1" label="Enter a time" onchange={handleTime} required value={selectedTime}></lightning-input>
+    <div class="slds-var-p-around_small">
+ 
+        <lightning-button variant="brand" label="Book Appointment" onclick={submitHandler} required class="slds-p-right_medium formatbutton " ></lightning-button>
+        <!-- <lightning-button variant="brand" label="Check Appointment" onclick={checkHandler} required></lightning-button> -->
+    
+    </div>
+    
+
+    
+</lightning-card>
+</template> 
